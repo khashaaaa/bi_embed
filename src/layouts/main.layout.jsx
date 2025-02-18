@@ -13,11 +13,13 @@ export const MainLayout = () => {
 
       <div className="relative z-10 w-full flex flex-col min-h-screen">
         <Head />
-        <div className="flex-grow grid grid-cols-5">
-          <div className="col-span-4 bg-transparent flex flex-col">
+        <div className="flex-grow grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5">
+          <div className="md:col-span-3 lg:col-span-4 bg-transparent flex flex-col">
             <Outlet />
           </div>
-          <Aside />
+          <div className="hidden md:block md:col-span-1">
+            <Aside />
+          </div>
         </div>
         <Foot />
       </div>
